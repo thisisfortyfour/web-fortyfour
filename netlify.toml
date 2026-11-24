@@ -1,0 +1,27 @@
+# FORTYFOUR — thisisfortyfour.com
+# Netlify publica la carpeta "site" tal cual (no hay paso de build).
+[build]
+  publish = "site"
+  edge_functions = "netlify/edge-functions"
+
+[[redirects]]
+  from = "/proyectos/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "https://www.thisisfortyfour.com/*"
+  to = "https://thisisfortyfour.com/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/assets/i18n-en.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=300"

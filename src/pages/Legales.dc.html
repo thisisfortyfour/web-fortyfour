@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>FORTYFOUR — Legales</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:'Alte Haas Grotesk';src:url('/_blob/21319ce31be31003796022676862d1fc') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+body{margin:0;background:#f8f8f6}
+a{color:#0b0b0b}a:hover{color:#9f0c14}
+.lg-nav a{text-decoration:none}
+.lg-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:clamp(16px,2.4vw,40px);padding:clamp(56px,8vw,120px) clamp(16px,3vw,40px) clamp(64px,8vw,120px)}
+.lg-title{grid-column:1 / span 3;margin:0;font-size:clamp(40px,6vw,92px);line-height:1;font-weight:400;letter-spacing:-0.025em;text-transform:uppercase}
+.lg-date{grid-column:1 / span 2;margin:18px 0 0;font-size:13px;color:#6b6b6b}
+.lg-index{grid-column:1;grid-row:3;align-self:start;position:sticky;top:24px;margin:clamp(56px,7vw,96px) 0 0;padding:0;list-style:none;font-size:13px;line-height:1.5}
+.lg-index li{margin:0 0 10px}
+.lg-index a{text-decoration:none;color:#6b6b6b}
+.lg-index a:hover{color:#9f0c14}
+.lg-body{grid-column:2 / span 3;grid-row:3;margin-top:clamp(56px,7vw,96px)}
+.lg-sec{padding:28px 0 36px;border-top:1px solid rgba(11,11,11,0.14);scroll-margin-top:24px}
+.lg-sec h2{display:flex;gap:14px;align-items:baseline;margin:0 0 18px;font-size:clamp(20px,1.9vw,28px);line-height:1.2;font-weight:400;letter-spacing:-0.01em}
+.lg-sec h2 span{font-size:13px;color:#9f0c14;letter-spacing:0}
+.lg-sec p{margin:0 0 14px;max-width:68ch;font-size:15px;line-height:1.65;white-space:pre-line}
+.lg-sec p:last-child{margin-bottom:0}
+.pg{animation:pg-in .7s cubic-bezier(.2,.7,.2,1) backwards}
+@keyframes pg-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.pg{animation:none}}
+@media (max-width:820px){.lg-grid{grid-template-columns:minmax(0,1fr)}.lg-title,.lg-date,.lg-body{grid-column:1}.lg-index{display:none}.lg-body{grid-row:auto;margin-top:48px}}
+
+/* Phones: compact header and stacked footer */
+@media (max-width:600px){
+.pg > header{padding:14px 16px !important;gap:10px !important;align-items:center !important}
+.pg > header > a img{height:40px !important}
+.pg > header nav{gap:14px !important;font-size:14px !important}
+.pg > footer{flex-direction:column;align-items:flex-start !important;gap:14px !important;margin:0 16px !important;font-size:12px !important}
+.pg > footer > div{display:grid !important;grid-template-columns:auto auto;justify-content:space-between;gap:8px 12px !important;width:100%}
+}
+.ff-lang{color:#6b6b6b !important;text-decoration:none !important}
+.ff-lang:hover{color:#9f0c14 !important}
+</style>
+</helmet>
+<div class="pg" style="min-height: 100vh; background: #f8f8f6; color: #0b0b0b; font-family: 'Alte Haas Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif; overflow: clip">
+  <header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 20px clamp(16px, 3vw, 40px)">
+    <a href="Main.dc.html" aria-label="FORTYFOUR inicio" style="display: block; line-height: 0"><img src="/_blob/a4a41762068286afc9ae7cbd9c75b5ac" alt="FORTYFOUR" draggable="false" style="height: clamp(48px, 5vw, 64px); width: auto; display: block"></a>
+    <nav class="lg-nav" aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: clamp(14px, 2.4vw, 32px); font-size: 15px">
+      <a href="Main.dc.html">Trabajo</a>
+      <a href="Servicios.dc.html">Servicios</a>
+      <a href="Estudio.dc.html">Nosotros</a>
+      <a href="Contacto.dc.html" style="color: #9f0c14">Contacto</a>
+      <a href="#" class="ff-lang" data-lang-toggle aria-label="English">EN</a>
+    </nav>
+  </header>
+
+  <main class="lg-grid">
+    <h1 class="lg-title">Legales</h1>
+    <p class="lg-date" data-cms="legal.date">Última actualización: noviembre de 2026</p>
+
+    <ol class="lg-index" aria-label="Secciones">
+      <li><a href="#terminos">(01) Términos y condiciones</a></li>
+      <li><a href="#propiedad">(02) Propiedad intelectual</a></li>
+      <li><a href="#privacidad">(03) Privacidad</a></li>
+      <li><a href="#cookies">(04) Cookies y medición</a></li>
+      <li><a href="#contacto-legal">(05) Contacto y jurisdicción</a></li>
+    </ol>
+
+    <div class="lg-body">
+      <section class="lg-sec" id="terminos">
+        <h2><span>(01)</span>Términos y condiciones de uso</h2>
+        <p data-cms="legal.terms">Este sitio (thisisfortyfour.com) pertenece a FORTYFOUR, estudio creativo con base en Argentina. Al navegarlo aceptás estos términos. Si no estás de acuerdo con ellos, te pedimos que no uses el sitio.
+
+El contenido del sitio es informativo y sirve para presentar el trabajo y los servicios del estudio. No constituye una oferta comercial vinculante: cada proyecto se cotiza y se acuerda por separado, con su propio presupuesto y condiciones.
+
+Podemos actualizar, cambiar o quitar contenido del sitio, y modificar estos términos, en cualquier momento. La versión vigente es siempre la publicada en esta página.
+
+Hacemos lo posible para que la información sea correcta y el sitio funcione bien, pero no garantizamos que esté libre de errores o disponible sin interrupciones. Los enlaces a sitios de terceros (redes sociales, por ejemplo) se ofrecen como referencia; no somos responsables de su contenido ni de sus políticas.</p>
+      </section>
+
+      <section class="lg-sec" id="propiedad">
+        <h2><span>(02)</span>Propiedad intelectual y derechos de autor</h2>
+        <p data-cms="legal.ip">Todo el contenido de este sitio (fotografías, videos, textos, diseños, logotipos, la marca FORTYFOUR y la propia web) está protegido por la legislación argentina de propiedad intelectual (Ley 11.723) y por los tratados internacionales aplicables.
+
+Las fotografías y los videos de proyectos se muestran como portfolio. Los derechos sobre ese material corresponden a FORTYFOUR, a sus autores y/o a las marcas y clientes con los que se realizó, según lo acordado en cada caso. Las marcas y logos de terceros que aparecen en el sitio pertenecen a sus respectivos titulares y se muestran solo para indicar que trabajamos con ellas.
+
+No está permitido copiar, descargar, reproducir, modificar, distribuir ni usar con fines comerciales ningún contenido del sitio sin autorización previa y por escrito. Para pedir permiso de uso, escribinos a federico@thisisfortyfour.com.
+
+Si sos titular de algún contenido que aparece en el sitio y creés que se está usando de forma indebida, escribinos y lo revisamos a la brevedad.</p>
+      </section>
+
+      <section class="lg-sec" id="privacidad">
+        <h2><span>(03)</span>Política de privacidad</h2>
+        <p data-cms="legal.privacy">Responsable de los datos: Federico Le Moglie (FORTYFOUR), CUIT 20-41069138-9, Mar del Plata, Provincia de Buenos Aires, Argentina. Contacto: federico@thisisfortyfour.com.
+
+Qué datos recopilamos: los que completás en los formularios de contacto (nombre, mail, teléfono, nombre de tu marca o empresa, datos de tu evento y la información que nos cuentes sobre tu proyecto). No pedimos datos sensibles.
+
+Para qué los usamos: únicamente para responder tu consulta, armar una propuesta y, si avanzamos, gestionar el trabajo. No los vendemos ni los compartimos con terceros con otros fines.
+
+Dónde se guardan: las respuestas de los formularios se almacenan en Google Forms (Google LLC), un proveedor que puede guardar la información en servidores fuera de Argentina. Las conservamos mientras sean necesarias para la relación comercial y luego las eliminamos.
+
+Completar el formulario es voluntario. Si no completás los campos obligatorios, no vamos a poder responder tu consulta.
+
+Tus derechos: podés pedir en cualquier momento acceder a tus datos, corregirlos, actualizarlos o pedir que los eliminemos, escribiendo a federico@thisisfortyfour.com.
+
+El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al efecto conforme lo establecido en el artículo 14, inciso 3 de la Ley N° 25.326. La Agencia de Acceso a la Información Pública, en su carácter de Órgano de Control de la Ley N° 25.326, tiene la atribución de atender las denuncias y reclamos que interpongan quienes resulten afectados en sus derechos por incumplimiento de las normas vigentes en materia de protección de datos personales.</p>
+      </section>
+
+      <section class="lg-sec" id="cookies">
+        <h2><span>(04)</span>Cookies y medición</h2>
+        <p data-cms="legal.cookies">Usamos Google Analytics para saber cuántas personas visitan el sitio, qué páginas ven y desde dónde llegan. Esta herramienta usa cookies y datos técnicos de navegación (por ejemplo, tipo de dispositivo, navegador y ubicación aproximada). La información es estadística y no la usamos para identificarte.
+
+El sitio también guarda en tu navegador algunos datos mínimos para funcionar mejor, como recordar que ya viste la pantalla de carga.
+
+Podés bloquear o borrar las cookies desde la configuración de tu navegador. El sitio va a seguir funcionando igual.</p>
+      </section>
+
+      <section class="lg-sec" id="contacto-legal">
+        <h2><span>(05)</span>Contacto y jurisdicción</h2>
+        <p data-cms="legal.contact">Por cualquier consulta sobre estos términos, la privacidad o el uso del contenido, escribinos a federico@thisisfortyfour.com.
+
+Estos términos se rigen por las leyes de la República Argentina. Ante cualquier controversia, serán competentes los tribunales ordinarios de Mar del Plata, Provincia de Buenos Aires, salvo que la normativa de defensa del consumidor disponga otra cosa.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 28px; margin: 0 clamp(16px, 3vw, 40px); padding: 18px 0 22px; border-top: 1px solid rgba(11,11,11,0.14); font-size: 13px; color: #6b6b6b">
+    <span data-cms="contact.footer_slogan">Pensamos, creamos, movemos.</span>
+    <span style="display: inline-flex; flex-wrap: wrap; gap: 6px 20px; align-items: center"><a href="Legales.dc.html" style="color: inherit">Legales</a><span data-cms="contact.copyright">© 2026 FORTYFOUR</span></span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2600}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Artboard-zo5h.dc.html": {
+      "h": 600,
+      "handmade": true,
+      "page": "page-vvdd3r",
+      "title": "Artboard 1",
+      "w": 800,
+      "x": 0,
+      "y": 0
+    },
+    "Main.dc.html": {
+      "expand": "fill",
+      "h": 900,
+      "is_interactive": true,
+      "title": "Home — collage",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "Servicios.dc.html": {
+      "expand": "fill",
+      "h": 1760,
+      "is_interactive": true,
+      "title": "Servicios",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "Estudio.dc.html": {
+      "expand": "fill",
+      "h": 3500,
+      "is_interactive": true,
+      "title": "Nosotros",
+      "w": 1440,
+      "x": 3040,
+      "y": 0
+    },
+    "Contacto.dc.html": {
+      "expand": "fill",
+      "h": 1540,
+      "is_interactive": true,
+      "title": "Contacto",
+      "w": 1440,
+      "x": 4560,
+      "y": 0
+    },
+    "Error404.dc.html": {
+      "expand": "fill",
+      "h": 900,
+      "is_interactive": true,
+      "title": "Error 404",
+      "w": 1440,
+      "x": 6080,
+      "y": 0
+    },
+    "Legales.dc.html": {
+      "expand": "fill",
+      "h": 2600,
+      "is_interactive": true,
+      "title": "Legales",
+      "w": 1440,
+      "x": 7600,
+      "y": 0
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-11-20T22:58:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {},
+  "order": [
+    "Main.dc.html",
+    "Servicios.dc.html",
+    "Estudio.dc.html",
+    "Contacto.dc.html",
+    "Error404.dc.html",
+    "Legales.dc.html",
+    "Artboard-zo5h.dc.html"
+  ],
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Page 1"
+    },
+    {
+      "id": "page-vvdd3r",
+      "name": "Page 2"
+    }
+  ],
+  "title": "FORTYFOUR — Home"
+}
