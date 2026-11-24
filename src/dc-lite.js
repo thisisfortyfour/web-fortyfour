@@ -111,7 +111,17 @@ function applyContent(root, c) {
     const k = el.getAttribute('data-cms');
     if (el.localName === 'img') {
       const v = images[k];
-      if (v && v.src) { el.setAttribute('src', v.src); if (v.alt != null) el.setAttribute('alt', v.alt); }
+      if (v && v.video) {
+        // A video in place of a photo: same classes and styles, plays muted on a loop.
+        const vid = el.ownerDocument.createElement('video');
+        Array.from(el.attributes).forEach((at) => { if (!/^(src|alt|loading|decoding|draggable)$/.test(at.name)) vid.setAttribute(at.name, at.value); });
+        vid.setAttribute('src', v.video);
+        if (v.src) vid.setAttribute('poster', v.src);
+        ['muted', 'loop', 'autoplay', 'playsinline'].forEach((b) => vid.setAttribute(b, b));
+        vid.setAttribute('preload', 'metadata');
+        if (v.alt) vid.setAttribute('aria-label', v.alt);
+        el.replaceWith(vid);
+      } else if (v && v.src) { el.setAttribute('src', v.src); if (v.alt != null) el.setAttribute('alt', v.alt); }
     } else if (texts[k] != null && texts[k] !== '') {
       el.innerHTML = escHtml(texts[k]).replace(/\n/g, '<br>');
     }
