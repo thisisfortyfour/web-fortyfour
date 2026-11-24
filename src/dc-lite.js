@@ -1,61 +1,10 @@
 // Small runtime that renders the site's Design Component pages (template + logic class) with React.
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { TEXTS as EN_TEXTS, DICT as EN_DICT, PATTERNS as EN_PATTERNS } from './i18n-en.js';
-
-// Language: the visitor's choice (ES / EN button), else the browser's language.
-let LANG = 'es';
-try {
-  const saved = localStorage.getItem('ff-lang');
-  LANG = saved === 'en' || saved === 'es' ? saved : (/^es\b/i.test(navigator.language || 'es') ? 'es' : 'en');
-} catch (e) {}
-const EN = LANG === 'en';
-function tr(s) {
-  if (!EN || typeof s !== 'string' || !s.trim()) return s;
-  const t = s.trim();
-  let out = EN_DICT[t];
-  if (out == null) {
-    for (const [re, fn] of EN_PATTERNS) { const m = t.match(re); if (m) { out = fn(m, tr); break; } }
-  }
-  if (out == null) return s;
-  const lead = s.match(/^\s*/)[0], trail = s.match(/\s*$/)[0];
-  return lead + out + trail;
-}
-function translateTemplate(root) {
-  if (!EN) return;
-  const walk = (node, inCms) => {
-    if (node.nodeType === 3) { if (!inCms && node.nodeValue.indexOf('{{') < 0) node.nodeValue = tr(node.nodeValue); return; }
-    if (node.nodeType !== 1 && node.nodeType !== 11) return;
-    if (node.nodeType === 1) {
-      ['placeholder', 'aria-label', 'alt', 'title'].forEach((a) => { const v = node.getAttribute(a); if (v && v.indexOf('{{') < 0) node.setAttribute(a, tr(v)); });
-    }
-    const cms = inCms || (node.nodeType === 1 && node.hasAttribute('data-cms'));
-    Array.from(node.childNodes).forEach((c) => walk(c, cms));
-  };
-  walk(root, false);
-}
-// English content: the panel's English fields first, then the built-in translations, then the Spanish.
-function englishContent(c) {
-  c = c || {};
-  const en = c.en || {};
-  const out = Object.assign({}, c);
-  out.texts = Object.assign({}, c.texts || {}, EN_TEXTS, (en.texts || {}));
-  Object.keys(en.texts || {}).forEach((k) => { if (!en.texts[k]) out.texts[k] = EN_TEXTS[k] || (c.texts || {})[k]; });
-  const pick = (base, over, keys) => { const o = Object.assign({}, base); keys.forEach((k) => { if (over && over[k] != null && (Array.isArray(over[k]) ? over[k].length : String(over[k]).trim())) o[k] = over[k]; }); return o; };
-  if (Array.isArray(c.services)) out.services = c.services.map((s) => pick(s, s && s.en, ['name', 'detail', 'inc']));
-  if (Array.isArray(c.projects)) out.projects = c.projects.map((p) => pick(p, p && p.en, ['cat', 'desc', 'tag', 'title1', 'title2']));
-  return out;
-}
-if (typeof document !== 'undefined') {
-  if (EN) { document.documentElement.lang = 'en'; document.title = tr(document.title); }
-  document.addEventListener('click', (e) => {
-    const a = e.target.closest && e.target.closest('[data-lang-toggle]');
-    if (!a) return;
-    e.preventDefault();
-    try { localStorage.setItem('ff-lang', EN ? 'es' : 'en'); } catch (err) {}
-    location.reload();
-  });
-}
+// Spanish only. Clear an old language choice left by the English version that was removed.
+try { localStorage.removeItem('ff-lang'); } catch (e) {}
+const tr = (s) => s;
+const translateTemplate = () => {};
 
 const h = React.createElement;
 const HOLE_WHOLE = /^\s*\{\{\s*([^}]+?)\s*\}\}\s*$/;
@@ -174,7 +123,6 @@ function applyContent(root, c) {
 }
 
 export function mount(tplEl, code, container) {
-  if (EN) window.__FF_CONTENT = englishContent(window.__FF_CONTENT);
   applyContent(tplEl.content, window.__FF_CONTENT);
   translateTemplate(tplEl.content);
   const tree = Array.from(tplEl.content.childNodes).map(compile).filter((c) => c != null);
