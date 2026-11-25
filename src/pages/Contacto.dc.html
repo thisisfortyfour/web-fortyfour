@@ -198,7 +198,7 @@ class Component extends DCLogic {
           { entry: 'entry.764265624', label: 'Correo electrónico', type: 'email', auto: 'email', req: true },
           { entry: 'entry.342905493', label: 'Teléfono', type: 'tel', auto: 'tel', req: true },
           { entry: '', merge: 'entry.892679484', label: 'Marca o empresa', type: 'text', auto: 'organization', req: false },
-          { entry: 'entry.84245751', label: '¿Qué servicio te interesa?', type: 'checks', options: ['Fotografía', 'Gestión de redes', 'Wedding Content', 'Brand Content', 'Diseño', 'PR'], req: true, wide: true },
+          { entry: 'entry.84245751', join: true, label: '¿Qué servicio te interesa?', type: 'checks', options: ['Fotografía', 'Gestión de redes', 'Wedding Content', 'Brand Content', 'Diseño', 'PR'], req: true, wide: true },
           { entry: 'entry.892679484', label: 'Contanos tu proyecto', type: 'area', help: 'Qué necesitás, para qué y cualquier dato que nos ayude a cotizarlo.', req: true, wide: true },
           { entry: '', merge: 'entry.892679484', label: '¿Para cuándo lo necesitás?', type: 'radio', options: ['Lo antes posible', 'Este mes', 'En 1 a 3 meses', 'Sin fecha definida'], req: false, wide: true }
         ] }

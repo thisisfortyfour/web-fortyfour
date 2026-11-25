@@ -10,7 +10,8 @@
         if (v == null || (Array.isArray(v) && !v.length) || String(v).trim() === '') return;
         if (f.merge) { (merged[f.merge] = merged[f.merge] || []).push(f.label + ': ' + (Array.isArray(v) ? v.join(', ') : v)); return; }
         if (!f.entry) return;
-        if (Array.isArray(v)) v.forEach(function (x) { body.append(f.entry, x); });
+        if (Array.isArray(v) && f.join) body.append(f.entry, v.join(', '));
+        else if (Array.isArray(v)) v.forEach(function (x) { body.append(f.entry, x); });
         else body.append(f.entry, String(v));
       });
       Object.keys(merged).forEach(function (k) {
