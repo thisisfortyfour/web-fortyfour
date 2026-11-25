@@ -20,8 +20,8 @@ a{color:#0b0b0b}a:hover{color:#9f0c14}
 .sv-item[data-on="1"],.sv-item[data-on="1"]:hover{color:#0b0b0b}
 .sv-item:focus-visible{outline:2px solid #9f0c14;outline-offset:4px}
 .sv-pill{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 22px;border-radius:999px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:background .25s,color .25s}
-.sv-pill.dark{background:#0b0b0b;color:#f8f8f6}
-.sv-pill.dark:hover{background:#9f0c14;color:#f8f8f6}
+.sv-pill.dark{background:#5E130D;color:#FDFCF7}
+.sv-pill.dark:hover{background:#C3171B;color:#FDFCF7}
 .sv-orb{position:absolute;left:50%;top:50%;z-index:-1;width:clamp(420px,48vw,760px);aspect-ratio:720 / 900;transform:translate(-50%,-50%);pointer-events:none}
 .sv-orb img{display:block;width:100%;height:100%;animation:sv-drift 11s ease-in-out infinite alternate,sv-spin 48s linear infinite}
 @keyframes sv-drift{0%{translate:-2% 1.5%;scale:1}35%{translate:2.5% -2%;scale:1.05 0.97}70%{translate:-1.5% -2.5%;scale:0.97 1.04}100%{translate:1.5% 2%;scale:1.03}}
@@ -88,17 +88,31 @@ a{color:#0b0b0b}a:hover{color:#9f0c14}
 .sd-p1{grid-column:1 / span 3 !important;margin-top:28px !important}
 .sd-p2{grid-column:3 / span 3 !important;margin-top:36px !important}
 }
+
+/* Sistema de marca 2026: menú, logo y pie */
+.sv-nav a{text-transform:uppercase;font-size:13px !important;letter-spacing:.02em;color:#1C1B1A;text-decoration:none !important}
+.sv-nav a::before{content:"["}
+.sv-nav a::after{content:"]"}
+.sv-nav a[aria-current]{color:#5E130D}
+.sv-nav a.nav-ct{color:#C3171B}
+.sv-nav a:hover{color:#C3171B}
+.sv-foot{text-transform:uppercase;letter-spacing:.02em;font-size:12px !important;color:#1C1B1A !important}
+.sv-foot a{color:#1C1B1A !important}
+.sv-foot a:hover{color:#C3171B !important}
+.foot-iso{height:20px;width:auto;display:block}
+@media (max-width:700px){.sv-foot{font-size:10.5px !important;letter-spacing:0}}
+[data-cms="services.cta_title"]{text-transform:uppercase;letter-spacing:0 !important;color:#1C1B1A}
 </style>
 </helmet>
 <div class="pg" style="min-height: 100vh; background: #f8f8f6; color: #0b0b0b; font-family: 'Alte Haas Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif; overflow: clip">
 
   <header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 20px clamp(16px, 3vw, 40px)">
-    <a href="Main.dc.html" aria-label="FORTYFOUR inicio" style="display: block; line-height: 0"><img src="/_blob/a4a41762068286afc9ae7cbd9c75b5ac" alt="FORTYFOUR" draggable="false" style="height: clamp(48px, 5vw, 64px); width: auto; display: block"></a>
+    <a href="Main.dc.html" aria-label="FORTYFOUR inicio" style="display: block; line-height: 0"><img src="/_blob/f3136a24f8b525e593301dade6f46862" alt="FORTYFOUR" draggable="false" style="height: clamp(48px, 5vw, 64px); width: auto; display: block"></a>
     <nav class="sv-nav" aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: clamp(14px, 2.4vw, 32px); font-size: 15px">
       <a href="Main.dc.html">Trabajo</a>
-      <a href="Servicios.dc.html" aria-current="page" style="text-decoration: underline; text-underline-offset: 5px">Servicios</a>
+      <a href="Servicios.dc.html" aria-current="page">Servicios</a>
       <a href="Estudio.dc.html">Nosotros</a>
-      <a href="Contacto.dc.html" style="color: #9f0c14">Contacto</a>
+      <a href="Contacto.dc.html" class="nav-ct">Contacto</a>
     </nav>
   </header>
 
@@ -130,7 +144,7 @@ a{color:#0b0b0b}a:hover{color:#9f0c14}
   </section>
 
   <section id="contacto" style="position: relative; isolation: isolate; padding: clamp(84px, 9vw, 140px) clamp(16px, 3vw, 40px) clamp(110px, 12vw, 180px); text-align: center">
-    <div class="sv-orb" aria-hidden="true"><img src="/_blob/4d95d98af91dc26ddf088d6f4289f92f" alt="" draggable="false"></div>
+    <div class="sv-orb" aria-hidden="true"><img src="/_blob/0f2a1351e232ef6da579dc6d203847f4" alt="" draggable="false"></div>
     <h2 style="position: relative; margin: 0; font-size: clamp(34px, 4.6vw, 64px); line-height: 1.04; font-weight: 400; letter-spacing: -0.025em" data-cms="services.cta_title">¿Tenés un proyecto<br>en mente?</h2>
     <p style="position: relative; margin: 14px 0 26px; font-size: 16px; color: #ffffff" data-cms="services.cta_sub">Hablemos.</p>
     <a class="sv-pill dark" href="Contacto.dc.html#otro" style="position: relative">Escribinos <span aria-hidden="true">→</span></a>
@@ -143,7 +157,7 @@ a{color:#0b0b0b}a:hover{color:#9f0c14}
       <a href="https://instagram.com/thisisfortyfour" data-cms="contact.instagram_label" data-cms-href="contact.instagram_href">Instagram @thisisfortyfour</a>
       <a href="https://www.linkedin.com/company/thisisfortyfour/" data-cms-href="contact.linkedin_href">LinkedIn</a>
     </div>
-    <span style="display: inline-flex; flex-wrap: wrap; gap: 6px 20px; align-items: center"><a href="Legales.dc.html" style="color: inherit">Legales</a><span data-cms="contact.copyright">© 2026 FORTYFOUR</span></span>
+    <span style="display: inline-flex; flex-wrap: wrap; gap: 6px 20px; align-items: center"><a href="Legales.dc.html" style="color: inherit">Legales</a><span style="display: inline-flex; align-items: center; gap: 6px"><span data-cms="contact.copyright">© 2026 FORTYFOUR</span><img class="foot-iso" src="/_blob/f3136a24f8b525e593301dade6f46862" alt="" aria-hidden="true" draggable="false"></span></span>
   </footer>
 
   <sc-if value="{{dOpen}}" hint-placeholder-val="{{ false }}">

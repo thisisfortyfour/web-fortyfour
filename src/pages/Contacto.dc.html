@@ -70,12 +70,25 @@ textarea.ct-input{min-height:96px;resize:vertical;line-height:1.5}
 .pg > footer > div{display:grid !important;grid-template-columns:auto auto;justify-content:space-between;gap:8px 12px !important;width:100%}
 .pg > footer > div a{white-space:nowrap !important}
 }
+
+/* Sistema de marca 2026: menú, logo y pie */
+.ct-nav a{text-transform:uppercase;font-size:13px !important;letter-spacing:.02em;color:#1C1B1A;text-decoration:none !important}
+.ct-nav a::before{content:"["}
+.ct-nav a::after{content:"]"}
+.ct-nav a[aria-current]{color:#5E130D}
+.ct-nav a.nav-ct{color:#C3171B}
+.ct-nav a:hover{color:#C3171B}
+.ct-foot{text-transform:uppercase;letter-spacing:.02em;font-size:12px !important;color:#1C1B1A !important}
+.ct-foot a{color:#1C1B1A !important}
+.ct-foot a:hover{color:#C3171B !important}
+.foot-iso{height:20px;width:auto;display:block}
+@media (max-width:700px){.ct-foot{font-size:10.5px !important;letter-spacing:0}}
 </style>
 </helmet>
 <div class="pg" style="min-height: 100vh; background: #f8f8f6; color: #0b0b0b; font-family: 'Alte Haas Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif; overflow: clip">
 
   <header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 20px clamp(16px, 3vw, 40px)">
-    <a href="Main.dc.html" aria-label="FORTYFOUR inicio" style="display: block; line-height: 0"><img src="/_blob/a4a41762068286afc9ae7cbd9c75b5ac" alt="FORTYFOUR" draggable="false" style="height: clamp(48px, 5vw, 64px); width: auto; display: block"></a>
+    <a href="Main.dc.html" aria-label="FORTYFOUR inicio" style="display: block; line-height: 0"><img src="/_blob/f3136a24f8b525e593301dade6f46862" alt="FORTYFOUR" draggable="false" style="height: clamp(48px, 5vw, 64px); width: auto; display: block"></a>
     <nav class="ct-nav" aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: clamp(14px, 2.4vw, 32px); font-size: 15px">
       <a href="Main.dc.html">Trabajo</a>
       <a href="Servicios.dc.html">Servicios</a>
@@ -140,7 +153,7 @@ textarea.ct-input{min-height:96px;resize:vertical;line-height:1.5}
 
   <footer class="ct-foot" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 28px; margin: 0 clamp(16px, 3vw, 40px); padding: 18px 0 22px; border-top: 1px solid rgba(11,11,11,0.14); font-size: 13px; color: #6b6b6b">
     <span data-cms="contact.footer_slogan">Pensamos, creamos, movemos.</span>
-    <span style="display: inline-flex; flex-wrap: wrap; gap: 6px 20px; align-items: center"><a href="Legales.dc.html" style="color: inherit">Legales</a><span data-cms="contact.copyright">© 2026 FORTYFOUR</span></span>
+    <span style="display: inline-flex; flex-wrap: wrap; gap: 6px 20px; align-items: center"><a href="Legales.dc.html" style="color: inherit">Legales</a><span style="display: inline-flex; align-items: center; gap: 6px"><span data-cms="contact.copyright">© 2026 FORTYFOUR</span><img class="foot-iso" src="/_blob/f3136a24f8b525e593301dade6f46862" alt="" aria-hidden="true" draggable="false"></span></span>
   </footer>
   <sc-if value="{{sent}}" hint-placeholder-val="{{ false }}">
     <section class="ct-ok" role="status" aria-live="polite">

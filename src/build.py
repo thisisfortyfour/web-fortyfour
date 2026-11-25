@@ -33,6 +33,7 @@ for f in os.listdir('optimized'):
     if f.endswith('.mp4') and os.path.exists(OUT+'/assets/video/'+f) and os.path.getsize('optimized/'+f) < os.path.getsize(OUT+'/assets/video/'+f):
         shutil.copy('optimized/'+f, OUT+'/assets/video/'+f)
 shutil.copy('dc-lite.min.js', OUT+'/assets/dc-lite.js')
+shutil.copy('site.js', OUT+'/assets/site.js')
 ROUTES={'Main.dc.html':'/','Servicios.dc.html':'/servicios','Estudio.dc.html':'/nosotros','Contacto.dc.html':'/contacto','Error404.dc.html':'/404','Legales.dc.html':'/legales'}
 PAGES=[('Main.dc.html','index.html','/','FORTYFOUR — Agencia creativa','FORTYFOUR es una agencia creativa: fotografía, diseño, gestión de redes, PR, wedding content y brand content. Pensamos, creamos, movemos.'),
  ('Servicios.dc.html','servicios.html','/servicios','Servicios — FORTYFOUR','Fotografía, diseño, gestión de redes, PR, wedding content y brand content para marcas que quieren comunicar mejor.'),
