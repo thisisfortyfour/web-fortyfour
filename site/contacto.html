@@ -249,7 +249,11 @@ class Component extends DCLogic {
     this.vals = [{}, {}, {}];
     // Links from other pages can open a tab: #marcas, #wedding, #otro or #otro-2 (preselects that service).
     try {
-      const h = (window.location.hash || '').replace('#', '');
+      // Also accepts /contacto/wedding, ?tipo=wedding and a # that Instagram turned into %23.
+      let loc = window.location.pathname + window.location.search + window.location.hash;
+      try { loc = decodeURIComponent(loc); } catch (err) {}
+      const hm = loc.toLowerCase().match(/(?:#|[?&]tipo=|\/contacto\/)(marcas|wedding|otro(?:-\d)?)/);
+      const h = hm ? hm[1] : '';
       const m = h.match(/^otro(?:-(\d))?$/);
       if (h === 'wedding') this.initial = 1;
       else if (h === 'marcas') this.initial = 0;

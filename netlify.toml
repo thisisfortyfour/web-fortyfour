@@ -5,6 +5,11 @@
   edge_functions = "netlify/edge-functions"
 
 [[redirects]]
+  from = "/contacto/*"
+  to = "/contacto.html"
+  status = 200
+
+[[redirects]]
   from = "/proyectos/*"
   to = "/index.html"
   status = 200
